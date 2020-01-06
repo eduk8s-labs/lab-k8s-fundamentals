@@ -1,0 +1,25 @@
+apiVersion: training.eduk8s.io/v1alpha1
+kind: Workshop
+metadata:
+  name: lab-k8s-fundamentals
+spec:
+  vendor: eduk8s.io
+  title: Kubernetes Fundamentals
+  description: Kubernetes Fundamentals
+  url: https://github.com/eduk8s-tests/lab-kpack-testing
+  image: quay.io/eduk8s/workshop-dashboard:develop
+  duration: 1h
+  session:
+    budget: medium
+    patches:
+      spec:
+        containers:
+        - name: workshop
+          resources:
+            requests:
+              memory: 256Mi
+            limits:
+              memory: 512Mi
+          env:
+          - name: DOWNLOAD_URL
+            value: https://github.com/openshift-labs/lab-k8s-fundamentals/archive/master.tar.gz

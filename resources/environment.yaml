@@ -1,0 +1,11 @@
+apiVersion: training.eduk8s.io/v1alpha1
+kind: WorkshopEnvironment
+metadata:
+  name: lab-k8s-fundamentals
+spec:
+  workshop:
+    name: lab-k8s-fundamentals
+  request:
+    token: lab-k8s-fundamentals
+  session:
+    username: eduk8s
