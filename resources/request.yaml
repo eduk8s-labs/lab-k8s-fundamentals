@@ -3,5 +3,6 @@ kind: WorkshopRequest
 metadata:
   name: lab-k8s-fundamentals
 spec:
-  environment: lab-k8s-fundamentals
-  token: lab-k8s-fundamentals
+  environment:
+    name: lab-k8s-fundamentals
+    token: lab-k8s-fundamentals
