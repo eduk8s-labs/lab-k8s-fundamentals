@@ -9,9 +9,9 @@ kubectl get deployment
 This should yield output:
 
 ```
-NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-blog      2         2         2            2           5m
-blog-db   1         1         1            1           5m
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+blog      2/2     2            2           5m
+blog-db   1/1     1            1           5m
 ```
 
 To narrow in on a specific resource, the name of that resource can be added to the command:
@@ -23,8 +23,8 @@ kubectl get deployment/blog
 This should then yield output for just the one resource.
 
 ```
-NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-blog      2         2         2            2           5m
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+blog   2/2     2            2           5m
 ```
 
 To see much more detailed information about a resource `kubectl describe` can be used.
@@ -37,9 +37,10 @@ For a deployment, just the start of what you should see is:
 
 ```
 Name:                   blog
-Namespace:              %session_namespace%
-CreationTimestamp:      Tue, 19 Feb 2019 00:52:23 +0000
+Namespace:              lab-k8s-fundamentals-user1
+CreationTimestamp:      Tue, 04 Feb 2020 03:06:56 +0000
 Labels:                 app=blog
+Annotations:            deployment.kubernetes.io/revision: 1
 Selector:               app=blog
 Replicas:               2 desired | 2 updated | 2 total | 2 available | 0 unavailable
 StrategyType:           RollingUpdate
