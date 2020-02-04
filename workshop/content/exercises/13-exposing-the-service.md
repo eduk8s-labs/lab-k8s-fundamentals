@@ -56,4 +56,6 @@ Now that the `ingress` has been created, you can access the front end web applic
 
 http://blog-%session_namespace%.%ingress_domain%
 
+Visit the front end web application by clicking on this link. If it shows as not being available, keep refreshing the page until it is. This is necessary as it make take a few moments to reconfigure the ingress routing layer.
+
 Note that this works because a wildcard CNAME has already been pre-configured in an external domain name server (DNS) to direct traffic for this host to the router for the Kubernetes cluster. If this was your own Kubernetes cluster, you would need to configure an appropriate CNAME in the DNS for the host you want to use.
