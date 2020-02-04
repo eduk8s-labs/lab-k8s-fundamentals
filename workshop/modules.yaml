@@ -1,0 +1,46 @@
+config:
+    google_tracking_id: UA-135921114-1
+
+modules:
+    index:
+        name: Workshop Overview
+        exit_sign: Start Workshop
+    exercises/01-the-openshift-platform:
+        name: The OpenShift Platform
+    exercises/02-accessing-the-cluster:
+        name: Accessing the Cluster
+    exercises/03-deploying-an-application:
+        name: Deploying an Application
+    exercises/04-creating-the-resources:
+        name: Creating the Resources
+    exercises/05-querying-the-resources:
+        name: Querying the Resources
+    exercises/06-labelling-of-resources:
+        name: Labelling of Resources
+    exercises/07-deployment-resource:
+        name: Deployment Resource
+    exercises/08-replicasets-and-pods:
+        name: ReplicaSets and Pods
+    exercises/09-replicas-and-scaling:
+        name: Replicas and Scaling
+    exercises/10-pods-and-containers:
+        name: Pods and Containers
+    exercises/11-application-logging:
+        name: Application Logging
+    exercises/12-accessing-containers:
+        name: Accessing Containers
+    exercises/13-service-networking:
+        name: Service Networking
+    exercises/14-exposing-the-service:
+        name: Exposing the Service
+    exercises/15-linking-the-database:
+        name: Linking the Database
+    exercises/16-setting-up-database:
+        name: Setting up Database
+    exercises/17-persistent-volumes:
+        name: Persistent Volumes
+    # exercises/18-application-health:
+    #     name: Application Health
+    finish:
+        name: Workshop Summary
+        exit_sign: Finish Workshop

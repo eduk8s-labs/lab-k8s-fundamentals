@@ -5,21 +5,9 @@ metadata:
 spec:
   vendor: eduk8s.io
   title: Kubernetes Fundamentals
-  description: Kubernetes Fundamentals
-  url: https://github.com/eduk8s-tests/lab-kpack-testing
-  image: quay.io/eduk8s/workshop-dashboard:master
+  description: Workshop on getting started with Kubernetes
+  url: https://github.com/eduk8s-tests/lab-k8s-fundamentals
+  image: quay.io/eduk8s-tests/lab-k8s-fundamentals:master
   duration: 1h
   session:
     budget: medium
-    patches:
-      spec:
-        containers:
-        - name: workshop
-          resources:
-            requests:
-              memory: 256Mi
-            limits:
-              memory: 512Mi
-          env:
-          - name: DOWNLOAD_URL
-            value: github.com/openshift-labs/lab-k8s-fundamentals

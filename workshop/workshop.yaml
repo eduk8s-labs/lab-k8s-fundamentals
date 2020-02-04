@@ -1,0 +1,24 @@
+name: Kubernetes Fundamentals
+
+modules:
+    activate:
+    - index
+    - exercises/01-the-openshift-platform
+    - exercises/02-accessing-the-cluster
+    - exercises/03-deploying-an-application
+    - exercises/04-creating-the-resources
+    - exercises/05-querying-the-resources
+    - exercises/06-labelling-of-resources
+    - exercises/07-deployment-resource
+    - exercises/08-replicasets-and-pods
+    - exercises/09-replicas-and-scaling
+    - exercises/10-pods-and-containers
+    - exercises/11-application-logging
+    - exercises/12-accessing-containers
+    - exercises/13-service-networking
+    - exercises/14-exposing-the-service
+    - exercises/15-linking-the-database
+    - exercises/16-setting-up-database
+    - exercises/17-persistent-volumes
+    - exercises/18-application-health
+    - finish
