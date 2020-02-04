@@ -6,8 +6,8 @@ spec:
   vendor: eduk8s.io
   title: Kubernetes Fundamentals
   description: Workshop on getting started with Kubernetes
-  url: https://github.com/eduk8s-tests/lab-k8s-fundamentals
-  image: quay.io/eduk8s-tests/lab-k8s-fundamentals:master
+  url: https://github.com/eduk8s-labs/lab-k8s-fundamentals
+  image: quay.io/eduk8s-labs/lab-k8s-fundamentals:master
   duration: 1h
   session:
     budget: medium
