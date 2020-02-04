@@ -52,4 +52,6 @@ In this example, the URL for accessing the web application will be:
 
 http://blog-%session_namespace%.%ingress_domain%
 
-Visit the front end web application by clicking on this link. There will not be any blog posts displayed as yet. We will get to setting up and populating the database later.
+Visit the front end web application by clicking on this link. If it shows as not being available, keep refreshing the page until it is. This is necessary as it make take a few moments to reconfigure the ingress routing layer.
+
+There will not be any blog posts displayed as yet. We will get to setting up and populating the database later.
