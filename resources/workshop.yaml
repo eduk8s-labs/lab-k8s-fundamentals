@@ -7,7 +7,7 @@ spec:
   title: Kubernetes Fundamentals
   description: Kubernetes Fundamentals
   url: https://github.com/eduk8s-tests/lab-kpack-testing
-  image: quay.io/eduk8s/workshop-dashboard:develop
+  image: quay.io/eduk8s/workshop-dashboard:master
   duration: 1h
   session:
     budget: medium
