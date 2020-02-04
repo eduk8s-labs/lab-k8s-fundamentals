@@ -8,7 +8,7 @@ Before continuing, verify that the `kubectl` command runs and the workshop envir
 kubectl version
 ```
 
-Did you type the command in yourself? If you did, click on the command here instead and you will find that it is executed for you. You can click on any command here in the workshop notes which has the <span class="fas fa-play-circle"></span> icon shown to the right of it, and it will be copied to the interactive terminal and run for you.
+Did you type the command in yourself? If you did, click on the command here instead and you will find that it is executed for you. You can click on any command here in the workshop notes which has the <span class="fas fa-running"></span> icon shown to the right of it, and it will be copied to the interactive terminal and run for you.
 
 When run, you should see output similar to:
 
