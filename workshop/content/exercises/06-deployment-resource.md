@@ -113,7 +113,7 @@ One could now re-run the command and leave off the `--dry-run` option and it wou
 
 Maintaining the master copy of the configuration in Kubernetes like this is fine in a development environment, but for production, it is better to keep the master copy as a local file, under revision control so you can track it, and when changes are needed, edit the local master copy and apply it to the Kubernetes cluster.
 
-The Kubernetes documentation has a discussion about these two different approaches to managing configuration in [Managing Kubernetes Objects Using Imperative Commands](https://kubernetes.io/docs/concepts/overview/object-management-kubectl/imperative-command/) and [Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/concepts/overview/object-management-kubectl/declarative-config/).
+The Kubernetes documentation has a discussion about these two different approaches to managing configuration in [Managing Kubernetes Objects Using Imperative Commands](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/) and [Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/).
 
 As it is closer to what you would want to do for a production environment, we will use the latter approach.
 
