@@ -22,4 +22,4 @@ spec:
               memory: 512Mi
           env:
           - name: DOWNLOAD_URL
-            value: https://github.com/openshift-labs/lab-k8s-fundamentals/archive/master.tar.gz
+            value: github.com/openshift-labs/lab-k8s-fundamentals
