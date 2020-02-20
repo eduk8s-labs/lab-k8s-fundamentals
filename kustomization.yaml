@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
 - resources/workshop.yaml
-- resources/training-room.yaml
+- resources/training-portal.yaml

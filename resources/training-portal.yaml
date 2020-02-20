@@ -1,9 +1,9 @@
 apiVersion: training.eduk8s.io/v1alpha1
-kind: TrainingRoom
+kind: TrainingPortal
 metadata:
   name: lab-k8s-fundamentals
 spec:
+  portal:
+    capacity: 1
   workshop:
     name: lab-k8s-fundamentals
-  session:
-    capacity: 1
