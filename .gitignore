@@ -2,3 +2,5 @@
 .bash_history
 .config/
 .kube/
+frontend-src/db.sqlite3
+__pycache__

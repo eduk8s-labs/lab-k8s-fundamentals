@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# This is a 'deploy' action hook script. This script must be executable
+# and will be run by the S2I process just before the original S2I 'run'
+# script is run. This script is to allow a user to run any final steps
+# just before the application is to be started. This can include running
+# background tasks.
+
+set -eo pipefail
+
+# Dump out the set of environment variables which were used by the build.
+
+echo " -----> Environment variables set for the deployed application."
+
+env
+
+# Dump out the name of the current working directory.
+
+echo " -----> Current working directory."
+
+pwd
+
+# If necessaary create the media directory if persistent volume being used.
+
+if [ -d /opt/app-root/data ]; then
+    if [ ! -d /opt/app-root/data/media/images ]; then
+        echo " -----> Creating directory for uploaded image files."
+
+        mkdir -p /opt/app-root/data/media/images
+    fi
+fi
+
+# Run the application specific deploy steps for this project. If an
+# external database is being used, or a persistent volume is used for
+# SQLite, only perform the database migration and do not run full setup.
+# When a persistent database is used the setup to add super user and
+# pre-load data would need to be run as manual step.
+
+if [ x"$DATABASE_HOST" != x"" ]; then
+    warpdrive migrate
+else
+    if [ x"$DATABASE_URL" != x"" -o -d /opt/app-root/secrets/database ]; then
+        warpdrive migrate
+    else
+        if [ -d /opt/app-root/data ]; then
+            if [ ! -f /opt/app-root/data/db.sqlite3 ]; then
+               warpdrive migrate
+            fi
+        else
+            if [ ! -f /opt/app-root/src/db.sqlite3 ]; then
+                DJANGO_ADMIN_USERNAME=developer \
+                   DJANGO_ADMIN_EMAIL=developer@example.com \
+                   DJANGO_ADMIN_PASSWORD=developer warpdrive setup
+            fi
+        fi
+    fi
+fi

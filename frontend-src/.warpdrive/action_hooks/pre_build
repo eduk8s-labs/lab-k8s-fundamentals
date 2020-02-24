@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# This is a 'pre_build' action hook script. This script must be
+# executable and will be run by the S2I process as the very first step.
+# This script can be used to install additional third party libraries
+# or packages that may be required by the build process. If the
+# 'pre_build' hook needs any files from the application source code, it
+# must grab them from the '/tmp/src' directory as they will only be
+# copied into place by the original S2I 'assemble' script later on in
+# the build process.
+
+set -eo pipefail
+
+# Dump out the initial set of environment variables.
+
+echo " -----> Initial environment variables set by builder image."
+
+env
+
+# Ensure we are using the latest pip and wheel packages.
+
+pip install -U pip setuptools wheel
+
+# Restore the cache directory from an incremental build.
+
+if [ -d /tmp/artifacts/cache ]; then
+    echo " -----> Restoring cache directory from incremental build."
+    mv /tmp/artifacts/cache /opt/app-root/
+fi
+
+# If a wheelhouse directory has been provided, ensure that the cache
+# directory exists. This has a side effect of ensuring pip will use the
+# cache directory.
+
+if [ -d /opt/app-root/src/.s2i/wheelhouse ]; then
+    mkdir -p /opt/app-root/cache
+fi
