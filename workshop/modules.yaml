@@ -1,6 +1,3 @@
-config:
-    google_tracking_id: UA-135921114-1
-
 modules:
     index:
         name: Workshop Overview
