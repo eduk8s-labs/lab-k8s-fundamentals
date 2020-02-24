@@ -45,7 +45,7 @@ In this you will see that the `spec` section contains:
         - env:
           - name: BLOG_SITE_NAME
             value: EduK8S Blog
-          image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master
+          image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:latest
           imagePullPolicy: Always
           name: blog
           ports:

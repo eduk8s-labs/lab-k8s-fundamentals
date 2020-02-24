@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: blog
-        image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master
+        image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:latest
         ports:
         - containerPort: 8080
         env:
