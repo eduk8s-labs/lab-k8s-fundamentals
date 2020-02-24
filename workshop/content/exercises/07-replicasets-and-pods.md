@@ -44,8 +44,8 @@ In this you will see that the `spec` section contains:
         containers:
         - env:
           - name: BLOG_SITE_NAME
-            value: OpenShift Blog
-          image: openshiftkatacoda/blog-django-py:latest
+            value: EduK8S Blog
+          image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master
           imagePullPolicy: Always
           name: blog
           ports:

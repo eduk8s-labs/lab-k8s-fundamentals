@@ -31,7 +31,7 @@ This should display:
 
 ```
 # Deployment blog, container blog
-BLOG_SITE_NAME=OpenShift Blog
+BLOG_SITE_NAME=EduK8S Blog
 ```
 
 The way that the front end web application is implemented, it is expecting the following environment variables for a separate database.
@@ -58,7 +58,7 @@ From the output, you can see that along side the existing `BLOG_SITE_NAME` envir
       containers:
       - env:
         - name: BLOG_SITE_NAME
-          value: OpenShift Blog
+          value: EduK8S Blog
         - name: DATABASE_HOST
           value: blog-db
 ```
@@ -93,7 +93,7 @@ For these, the `spec.template.spec.containers.env` setting would need to be upda
       containers:
       - env:
         - name: BLOG_SITE_NAME
-          value: OpenShift Blog
+          value: EduK8S Blog
         - name: DATABASE_NAME
           valueFrom:
             secretKeyRef:

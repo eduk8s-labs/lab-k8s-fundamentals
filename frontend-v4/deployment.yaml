@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: blog
-        image: openshiftkatacoda/blog-django-py:latest
+        image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master
         ports:
         - containerPort: 8080
         env:
         - name: BLOG_SITE_NAME
-          value: OpenShift Blog
+          value: EduK8S Blog
         - name: DATABASE_HOST
           value: blog-db
         - name: DATABASE_USER

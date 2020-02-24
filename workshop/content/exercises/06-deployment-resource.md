@@ -18,12 +18,12 @@ The first option is using the `kubectl create deployment` command.
 kubectl create deployment --help
 ```
 
-For the deployment of the front end web application, the container image we want to use is `openshiftkatacoda/blog-django-py:latest`.
+For the deployment of the front end web application, the container image we want to use is `quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master`.
 
 To see what `kubectl create deployment` would create for us run:
 
 ```execute
-kubectl create deployment blog --image openshiftkatacoda/blog-django-py:latest --dry-run -o yaml
+kubectl create deployment blog --image quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master --dry-run -o yaml
 ```
 
 This should yield:
@@ -49,7 +49,7 @@ spec:
         app: blog
     spec:
       containers:
-      - image: openshiftkatacoda/blog-django-py:latest
+      - image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master
         name: blog-django-py
         resources: {}
 status: {}
@@ -70,7 +70,7 @@ This command accepts numerous options for helping you fill out the resource defi
 To start to replicate the configuration for our sample application, run:
 
 ```execute
-kubectl run blog --image openshiftkatacoda/blog-django-py:latest --labels app=blog --replicas 2 --port 8080 --env BLOG_SITE_NAME="OpenShift Blog" --dry-run -o yaml
+kubectl run blog --image quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master --labels app=blog --replicas 2 --port 8080 --env BLOG_SITE_NAME="EduK8S Blog" --dry-run -o yaml
 ```
 
 This should produce:
@@ -98,8 +98,8 @@ spec:
       containers:
       - env:
         - name: BLOG_SITE_NAME
-          value: OpenShift Blog
-        image: openshiftkatacoda/blog-django-py:latest
+          value: EduK8S Blog
+        image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:master
         name: blog
         ports:
         - containerPort: 8080

@@ -17,7 +17,7 @@ kubectl exec -it $POD bash
 To setup an administrator password run:
 
 ```execute
-powershift image setup
+warpdrive setup
 ```
 
 This will ensure that the database has been initialised and then prompt for the user information. Enter a user name for the administrator:
@@ -35,13 +35,13 @@ admin@example.com
 A password:
 
 ```execute
-mypassword
+this-is-secret
 ```
 
 and confirm the password:
 
 ```execute
-mypassword
+this-is-secret
 ```
 
 A final thing this setup script will do is also load some initial posts.
@@ -58,4 +58,4 @@ http://blog-%session_namespace%.%ingress_domain%
 
 and see the posts.
 
-You can also click on the person icon top right of the page, and login with the credentials entered. This will allow you to enter additional posts.
+You can also if you want click on the person icon at the top right of the page, and login with the credentials entered. This will allow you to enter additional posts.
