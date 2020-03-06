@@ -1,5 +1,6 @@
 *.swp
 .bash_history
+.cache
 .config/
 .kube/
 frontend-src/db.sqlite3
