@@ -11,3 +11,6 @@ spec:
   duration: 1h
   session:
     budget: medium
+    applications:
+      console:
+        enabled: true
