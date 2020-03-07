@@ -12,5 +12,8 @@ spec:
   session:
     budget: medium
     applications:
+      terminal:
+        enabled: true
+        layout: split
       console:
         enabled: true
