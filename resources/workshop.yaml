@@ -17,3 +17,5 @@ spec:
         layout: split
       console:
         enabled: true
+      editor:
+        enabled: true
