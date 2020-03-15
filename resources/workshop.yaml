@@ -8,7 +8,7 @@ spec:
   description: Workshop on getting started with Kubernetes
   url: https://github.com/eduk8s-labs/lab-k8s-fundamentals
   image: quay.io/eduk8s-labs/lab-k8s-fundamentals:master
-  duration: 1h
+  duration: 45m
   session:
     budget: medium
     applications:
