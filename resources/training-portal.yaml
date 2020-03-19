@@ -4,6 +4,7 @@ metadata:
   name: lab-k8s-fundamentals
 spec:
   portal:
-    capacity: 1
+    capacity: 3
+    reserved: 1
   workshops:
   - name: lab-k8s-fundamentals
