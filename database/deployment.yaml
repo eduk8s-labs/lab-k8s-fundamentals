@@ -16,6 +16,8 @@ spec:
       labels:
         app: blog-db
     spec:
+      securityContext:
+        fsGroup: 0
       containers:
       - name: postgresql
         image: centos/postgresql-96-centos7:latest
