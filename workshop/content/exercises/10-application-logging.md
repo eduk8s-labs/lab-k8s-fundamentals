@@ -20,7 +20,15 @@ Then run `kubectl logs`:
 kubectl logs $POD
 ```
 
-Were there multiple containers in the `pod`, you would need to name the container using the `-c` or `--container` option. Alternatively, you could use the `--all-containers` option to fetch logs from application process running in any of the containers.
+Rather than identify a specific pod, you can also run `kubectl logs` against the deployment using:
+
+```execute
+kubectl logs deployment/blog
+```
+
+Where there are multiple pods, this will result in one of the pods associated with the deployment being randomly selected. So you will need to select the pod if you need to be sure about which one the logs are being retrieved from.
+
+If there are multiple containers in the `pod`, you would need to name the container using the `-c` or `--container` option. Alternatively, you could use the `--all-containers` option to fetch logs from application process running in any of the containers.
 
 If you wanted to follow the output of the running application, you can use the `-f` or `--follow` option.
 
