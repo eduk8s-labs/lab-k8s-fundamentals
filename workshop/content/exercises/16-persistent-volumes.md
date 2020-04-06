@@ -19,13 +19,13 @@ metadata:
     app: blog
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
 ```
 
-This says that the storage should be at least of size 1Gi and that the access mode should be `ReadWriteMany`.
+This says that the storage should be at least of size 1Gi and that the access mode should be `ReadWriteOnce`.
 
 Kubernetes supports three different access modes for storage.
 
@@ -35,7 +35,9 @@ Kubernetes supports three different access modes for storage.
 
 What access modes for storage are available will depend on the Kubernetes cluster.
 
-For the front end web application we are using, because we want to be able to run multiple instances, we need storage with an access mode that allows it to be mounted on multiple nodes in the Kubernetes cluster. This is because instances of the application could run on different nodes. This is why `ReadWriteMany` is requested.
+For the front end web application we are using, because we want to be able to run multiple instances, we technically need storage with an access mode that allows it to be mounted on multiple nodes in the Kubernetes cluster. This is because instances of the application could run on different nodes. As such `ReadWriteMany` should be the requested storage access mode.
+
+At this point you may be confused since the above persistent volume claim actually specifies `ReadWriteOnce`. For this workshop this is the case as we can't be sure a Kubernetes cluster will have storage of type `ReadWriteMany`. As a result we cheat. We request storage of type `ReadWriteOnce` and set a condition on the `Deployment` for the front end to force all pods for the application to be scheduled to the same node, thus allowing us to use `ReadWriteOnce`. In a real system it is generally regarded as bad practice to force an application when scaled to run on a single node, but we don't have much choice here. For your own application, if it needs to be scaled or use rolling deployments, you should use `ReadWriteMany`.
 
 In contrast, the database will only ever have one instance and so storage with access mode `ReadWriteOnce` is sufficient.
 
