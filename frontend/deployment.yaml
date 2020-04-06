@@ -14,6 +14,16 @@ spec:
       labels:
         app: blog
     spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - topologyKey: kubernetes.io/hostname
+            labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - blog
       securityContext:
         fsGroup: 0
       containers:
