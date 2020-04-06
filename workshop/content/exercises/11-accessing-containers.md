@@ -33,3 +33,5 @@ exit
 ```
 
 to end the interactive terminal session for the container.
+
+As with logs, you can use `kubectl exec` against the deployment, but you will not know which pod it will be run against if there is more than one.
