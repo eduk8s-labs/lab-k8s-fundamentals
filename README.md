@@ -12,12 +12,6 @@ For installation instructions for the eduk8s operator see:
 
 * https://github.com/eduk8s/eduk8s-operator
 
-This workshop also requires that your Kubernetes cluster have persistent
-volumes of type ``ReadWriteOnce`` (``RWO``) and ``ReadWriteMany`` (``RWX``)
-available. Your cluster must also be configured to handle the ``Ingress``
-resource type. If either of these conditions are not met, you will not be
-able to perform all steps of the workshop.
-
 Deployment
 ----------
 
