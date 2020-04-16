@@ -24,8 +24,6 @@ spec:
                 operator: In
                 values:
                 - blog
-      securityContext:
-        fsGroup: 0
       containers:
       - name: blog
         image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:latest
