@@ -10,9 +10,11 @@ To access the log output for a specific instance of your application, you can us
 
 As we have multiple pods, we need to grab just one of the names.
 
+{% raw %}
 ```execute
 POD=`kubectl get pod -l app=blog -o template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | head -1` && echo $POD
 ```
+{% endraw %}
 
 Then run `kubectl logs`:
 

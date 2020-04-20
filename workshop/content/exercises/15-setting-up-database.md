@@ -4,9 +4,11 @@ To do this we need to execute some commands within the running container for one
 
 Grab the name of one of the `pods` which are running:
 
+{% raw %}
 ```execute
 POD=`kubectl get pod -l app=blog -o template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | head -1` && echo $POD
 ```
+{% endraw %}
 
 and create an interactive terminal session.
 
