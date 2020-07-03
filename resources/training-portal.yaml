@@ -3,10 +3,9 @@ kind: TrainingPortal
 metadata:
   name: lab-k8s-fundamentals
 spec:
-  portal:
+  workshops:
+  - name: lab-k8s-fundamentals
     capacity: 3
     reserved: 1
     expires: 1h
     orphaned: 5m
-  workshops:
-  - name: lab-k8s-fundamentals
