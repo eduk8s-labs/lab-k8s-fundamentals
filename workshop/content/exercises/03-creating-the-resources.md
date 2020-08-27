@@ -46,7 +46,7 @@ kubectl rollout status deployment/blog
 
 to monitor and wait for it to be deployed.
 
-In the resources created for the front end web application, the `ingress` is special, in that it is what sets up access to our web application using a public URL.
+Notice that an `ingress` object is created for the front end web application. This object sets up access to our web application using a publicly accessible URL.
 
 In this example, the URL for accessing the web application will be:
 
