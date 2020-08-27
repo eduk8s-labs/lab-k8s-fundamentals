@@ -50,7 +50,7 @@ spec:
     spec:
       containers:
       - image: quay.io/eduk8s-labs/app-k8s-fundamentals-frontend:latest
-        name: blog-django-py
+        name: app-k8s-fundamentals-frontend
         resources: {}
 status: {}
 ```
@@ -142,3 +142,5 @@ Monitor progress of the deployment so you know when it has completed.
 ```execute
 kubectl rollout status deployment/blog
 ```
+
+Note that although we used ``kubectl run`` as a basis for creating an initial version of the ``deployment`` resource, from Kubernetes 1.18 the ability to create a ``deployment`` using ``kubectl run`` has been removed, instead it creates a ``pod``. This workshop still needs to be rewritten to cater for this change and is currently still using ``kubectl`` from Kubernetes 1.17. If you are using Kubernetes 1.18 or later, you will need to construct an initial ``deployment`` by hand using ``kubectl create deployment``, but because it is missing the various part explained above, they will need to be added.

@@ -24,26 +24,26 @@ warpdrive setup
 
 This will ensure that the database has been initialised and then prompt for the user information. Enter a user name for the administrator:
 
-```execute
-admin
+```terminal:input
+text: admin
 ```
 
 Then an email address:
 
-```execute
-admin@example.com
+```terminal:input
+text: admin@example.com
 ```
 
 A password:
 
-```execute
-this-is-secret
+```terminal:input
+text: this-is-secret
 ```
 
 and confirm the password:
 
-```execute
-this-is-secret
+```terminal:input
+text: this-is-secret
 ```
 
 A final thing this setup script will do is also load some initial posts.

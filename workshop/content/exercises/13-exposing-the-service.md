@@ -41,7 +41,7 @@ kubectl apply -f frontend-v3/
 This should output:
 
 ```
-deployment.apps/blog configured
+deployment.apps/blog unchanged
 ingress.extensions/blog created
 service/blog unchanged
 ```

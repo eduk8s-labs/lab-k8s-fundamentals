@@ -49,7 +49,7 @@ kubectl apply -f frontend-v2/
 The output should be:
 
 ```
-deployment.apps/blog configured
+deployment.apps/blog unchanged
 service/blog created
 ```
 

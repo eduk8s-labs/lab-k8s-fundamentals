@@ -60,6 +60,5 @@ You should see the `pod` which was targeted being marked as `Terminating` and it
 
 When complete, interrupt the `kubectl get --watch` command to stop it.
 
-```execute-1
-<ctrl+c>
+```terminal:interrupt
 ```
