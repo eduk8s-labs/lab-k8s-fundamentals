@@ -54,7 +54,9 @@ kubectl get ingress -l app=blog
 
 Now that the `ingress` has been created, you can access the front end web application using a web browser at:
 
+```dashboard:open-url
 http://blog-{{session_namespace}}.{{ingress_domain}}
+```
 
 Visit the front end web application by clicking on this link. If it shows as not being available, keep refreshing the page until it is. This is necessary as it make take a few moments to reconfigure the ingress routing layer.
 
