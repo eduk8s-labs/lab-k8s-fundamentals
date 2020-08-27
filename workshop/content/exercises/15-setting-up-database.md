@@ -57,7 +57,7 @@ exit
 You should now be able to visit the blog site at:
 
 ```dashboard:open-url
-http://blog-{{session_namespace}}.{{ingress_domain}}
+url: http://blog-{{session_namespace}}.{{ingress_domain}}
 ```
 
 and see the posts.

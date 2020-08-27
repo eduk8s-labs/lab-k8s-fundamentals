@@ -51,7 +51,7 @@ In the resources created for the front end web application, the `ingress` is spe
 In this example, the URL for accessing the web application will be:
 
 ```dashboard:open-url
-http://blog-{{session_namespace}}.{{ingress_domain}}
+url: http://blog-{{session_namespace}}.{{ingress_domain}}
 ```
 
 Visit the front end web application by clicking on this link. If it shows as not being available, keep refreshing the page until it is. This is necessary as it may take a few moments to reconfigure the ingress routing layer.
