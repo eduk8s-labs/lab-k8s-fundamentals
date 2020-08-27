@@ -8,7 +8,7 @@ Before continuing, verify that the `kubectl` command runs and the workshop envir
 kubectl version
 ```
 
-Did you type the command in yourself? If you did, click on the command here instead and you will find that it is executed for you. You can click on any command here in the workshop notes which has the <span class="fas fa-running"></span> icon shown to the right of it, and it will be copied to the interactive terminal and run for you.
+Did you type the command in yourself? If you did, click on the command here instead and you will find that it is executed for you. You can click on any command block here in the workshop notes which has the <span class="fas fa-running"></span> icon shown to the right of it, and it will be copied to the interactive terminal and run for you. Other action blocks may also be used in this workshop, showing different icons, you can also click on these to trigger the action described.
 
 When run, you should see output similar to:
 
@@ -20,3 +20,5 @@ Server Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.0", GitCom
 ba59dd186f0e634cf", GitTreeState:"clean", BuildDate:"2019-12-07T21:12:17Z", GoVersion:"go1.13.4", Compiler:"
 gc", Platform:"linux/amd64"}
 ```
+
+The version of Kubernetes being used may be different to the version shown here.
