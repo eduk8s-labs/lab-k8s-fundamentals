@@ -9,7 +9,7 @@ kubectl scale deployment/blog --replicas 3
 This will output:
 
 ```
-deployment.extensions/blog scaled
+deployment.apps/blog scaled
 ```
 
 and if you run:

@@ -12,7 +12,7 @@ Like with the names of `pods`, the IP addresses in use for an application will n
 
 To add a stable IP address and hostname for an application, a `service` resource needs to be created. The IP address of a `service` will map to the set of `pods` which make up your application, with traffic to the IP address of the service being load balanced across the `pods`.
 
-As with creating a `deployment`, the `kubectl` program provides convenience methods for creating a `service`. These are `kubectl expose` and `kubectl create service`. We will skip these and use the resource definition. Run:
+As with creating a `deployment`, the `kubectl` program provides methods for creating a `service`. These are `kubectl expose` and `kubectl create service`. We will skip these and use the resource definition. Run:
 
 ```execute
 cat frontend-v2/service.yaml

@@ -11,7 +11,7 @@ kubectl get deployment,service,pvc,secret -l app=blog-db -o name
 This should yield:
 
 ```
-deployment.extensions/blog-db
+deployment.apps/blog-db
 service/blog-db
 persistentvolumeclaim/blog-database
 secret/blog-credentials
