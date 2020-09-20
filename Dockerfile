@@ -1,4 +1,4 @@
-FROM quay.io/eduk8s/base-environment:200919.101830.5e6090f
+FROM quay.io/eduk8s/base-environment:200919.234739.52e6cbc
 
 COPY --chown=1001:0 . /home/eduk8s/
 
