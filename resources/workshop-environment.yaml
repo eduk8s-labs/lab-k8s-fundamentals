@@ -6,6 +6,7 @@ spec:
   workshop:
     name: lab-k8s-fundamentals
   request:
+    enabled: true
     token: lab-k8s-fundamentals
   session:
     username: eduk8s
