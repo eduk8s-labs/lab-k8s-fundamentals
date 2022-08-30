@@ -4,7 +4,7 @@ click==6.7
 dj-database-url==0.4.2
 Django==2.2.10
 idna==2.6
-mod-wsgi==4.7.1
+mod-wsgi==4.9.3
 Pillow==6.2.0
 psycopg2==2.7.3.2
 pytz==2017.3
